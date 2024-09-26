@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* App.css */
+nav {
+    transition: top 0.3s; /* Hiệu ứng chuyển động mượt mà khi cố định */
+  }
+  
+  .fixed {
+    position: fixed; /* Cố định thanh điều hướng */
+    top: 0; /* Ở trên cùng */
+    left: 0; /* Cạnh trái */
+    width: 100%; /* Chiều rộng 100% */
+    z-index: 10; /* Đảm bảo thanh điều hướng nằm trên các phần tử khác */
+  }
+  
+
+  
+  @keyframes slider {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.animate-slider {
+    animation: slider 20s linear infinite;
+}
+
+.pause-slider {
+    animation-play-state: paused; /* Tạm dừng animation khi hovering */
+}
